@@ -1,6 +1,3 @@
-/**
- * Created by RussBus24 on 2/13/2017.
- */
 var React = require('react');
 var connect = require('react-redux').connect;
 
@@ -32,4 +29,14 @@ var Query = React.createClass({
     }
 });
 
-module.exports = Query;
+var mapStateToProps = function(state, props) {
+  return {
+    visibleRating: state.seeRating,
+  };
+};
+
+var Container = connect(mapStateToProps, mapDispatchToProps)(Query);
+
+module.exports = Container;
+
+//module.exports = Query;

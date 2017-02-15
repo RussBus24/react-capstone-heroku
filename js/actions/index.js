@@ -32,10 +32,18 @@ var sensualityRating = function(rating) {
     };
 };
 
+var RATING_VISIBLE = 'RATING_VISIBLE';
+var ratingVisible = function(visible) {
+    return {
+        type: RATING_VISIBLE,
+        seeRating: visible
+    };
+};
+
 var IMDB_TEST = 'IMDB_TEST';
 var imdbTest = function() {
   return function(dispatch) {
-    var url = 'http://www.omdbapi.com/?t=Braveheart&y=&plot=short&r=json';
+    var url = 'http://www.omdbapi.com/?t=Braveheart&y=&plot=short&r=json'
     //var url = 'https://api.themoviedb.org/3/movie/550?api_key=07fa12fbf410b578cb104c44a8eb42e6'
     return fetch(url).then(function(response) {
       if (response.status < 200 || response.status >= 300) {
@@ -57,7 +65,7 @@ var imdbTest = function() {
 var IMDB_TEST_API = 'IMDB_TEST_API';
 var imdbTestAPI = function(query) {
     return function(dispatch) {
-        
+        imdb.get('Braveheart').then(console.log);
     };
 };
 
