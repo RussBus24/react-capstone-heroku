@@ -25,7 +25,7 @@ var Rating = React.createClass({
                    data-slider-step="1"
                    data-slider-value="3"
                    data-slider-tooltip="hide" />
-            <p><span id="ex18-label-1" className="hidden">Example slider label</span></p>
+            <p><span id="ex18-label-1" className="hidden">Language</span></p>
             <input id="ex19" type="text"
                    data-provide="slider"
                    data-slider-ticks="[1, 2, 3]"
@@ -35,7 +35,7 @@ var Rating = React.createClass({
                    data-slider-step="1"
                    data-slider-value="3"
                    data-slider-tooltip="hide" />
-            <p><span id="ex18-label-1" className="hidden">Example slider label</span></p>
+            <p><span id="ex18-label-1" className="hidden">Sensuality</span></p>
             <input id="ex19" type="text"
                    data-provide="slider"
                    data-slider-ticks="[1, 2, 3]"

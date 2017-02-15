@@ -4,29 +4,32 @@ var connect = require('react-redux').connect;
 var actions = require('../actions/index');
 var Title = require('./title');
 var Query = require('./query');
+var Rating = require('./rating');
 
 var Main = React.createClass({
-    
+
     componentDidMount: function() {
-        this.props.imdbTestQuery();
+        this.props.imdbTest();
     },
-    
+
     render: function() {
-        
+
         return (
-        <div>
-            <Title />
-            
-            <Query />
-        </div>
+            <div>
+                <Title />
+
+                <Query />
+
+                <Rating />
+            </div>
         );
     }
-    
+
 });
 
 var mapDispatchToProps = function(dispatch) {
     return {
-        imdbTestQuery: function(){dispatch(actions.imdbTestApi())}
+        imdbTest: function(){dispatch(actions.imdbTest())}
     };
 };
 
