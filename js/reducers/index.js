@@ -14,23 +14,20 @@ var queryReducer = function(state, action) {
         guessArray.push(action.number);
         return Object.assign({}, state, {guessArray: guessArray});
     }
-    else if (action.type === actions.VALIDATE_NUMBER) {
-        return state.concat({
-            type: action.type,
-            number: action.number
-        });
-    }
     else if (action.type === actions.RATING_VISIBLE) {
         return Object.assign({}, state, {seeRating: !state.seeRating});
     }
     else if (action.type === actions.MODAL_VISIBLE) {
         return Object.assign({}, state, {seeModal: !state.seeModal});
     }
-    else if (action.type === actions.UPDATE_FEWEST_GUESSES) {
-        return Object.assign({}, state, {fewestGuess: action.fewest});
+    else if (action.type === actions.VIOLENCE_RATING) {
+        return Object.assign({}, state, {violenceRating: action.rating});
     }
-    else if (action.type === actions.FETCH_GUESSES_SUCCESS) {
-        return Object.assign({}, state, {fewestGuess: action.fewest, guessid: action.guessid});
+    else if (action.type === actions.LANGUAGE_RATING) {
+        return Object.assign({}, state, {languageRating: action.rating});
+    }
+    else if (action.type === actions.SENSUALITY_RATING) {
+        return Object.assign({}, state, {sensualityRating: action.rating});
     }
 
     return state;
