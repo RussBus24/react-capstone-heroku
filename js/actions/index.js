@@ -40,6 +40,14 @@ var ratingVisible = function(visible) {
     };
 };
 
+var RESULT_QUOTE = 'RESULT_QUOTE';
+var resultQuote = function(quote) {
+    return {
+        type: RESULT_QUOTE,
+        resultQuote: quote
+    };
+};
+
 var MOVIE_INFO = 'MOVIE_INFO';
 var movieInfo = function(title, year, rating) {
     return {
@@ -81,6 +89,24 @@ var imdbTest = function(query) {
   };
 };
 
+var RETRIEVE_QUOTE = 'RETRIEVE_QUOTE';
+var retrieveQuote = function(query) {
+    return function(dispatch) {
+      var url = '/retrieve-quote';
+      return fetch(url).then(function(response) {
+        if (response.status < 200 || response.status >= 300) {
+          var error = new Error(response.statusText);
+          error.response = response;
+          throw error;
+        }
+        return response;
+      })
+        .then(function(response) {
+          return response.json();
+        })
+    };
+};
+
 exports.IMDB_QUERY = IMDB_QUERY;
 exports.imdbQuery= imdbQuery;
 exports.VIOLENCE_RATING = VIOLENCE_RATING;
@@ -91,3 +117,5 @@ exports.SENSUALITY_RATING = SENSUALITY_RATING;
 exports.sensualityRating = sensualityRating;
 exports.IMDB_TEST = IMDB_TEST;
 exports.imdbTest = imdbTest;
+exports.RETRIEVE_QUOTE = RESULT_QUOTE;
+exports.retrieveQuote = retrieveQuote;

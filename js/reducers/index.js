@@ -1,18 +1,17 @@
 var actions = require('../actions/index');
 
 var initialState = {
-    violenceRating: null,
-    languageRating: null,
-    sensualityRating: null,
-    seeRating: false
+    violenceRating: 0,
+    languageRating: 0,
+    sensualityRating: 0,
+    seeRating: false,
+    resultQuote: null
 };
 
 var queryReducer = function(state, action) {
     state = state || initialState;
     if (action.type === actions.IMDB_QUERY) {
-        var guessArray = state.guessArray.slice();
-        guessArray.push(action.number);
-        return Object.assign({}, state, {guessArray: guessArray});
+        
     }
     else if (action.type === actions.RATING_VISIBLE) {
         return Object.assign({}, state, {seeRating: !state.seeRating});
@@ -29,8 +28,11 @@ var queryReducer = function(state, action) {
     else if (action.type === actions.SENSUALITY_RATING) {
         return Object.assign({}, state, {sensualityRating: action.rating});
     }
+    else if (action.type === actions.RESULT_QUOTE) {
+        return Object.assign({}, state, {resultQuote: action.quote});
+    }
 
-    return state;
+  return state;
 };
 
 exports.queryReducer = queryReducer;
