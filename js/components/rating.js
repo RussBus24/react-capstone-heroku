@@ -3,6 +3,7 @@ var connect = require('react-redux').connect;
 //var ReactBootstrapSlider = require("react-bootstrap-slider");
 //var Slider = require('bootstrap-slider');
 var Ratings = require('react-rating');
+var Nouislider = require('react-nouislider');
 
 var actions = require('../actions/index');
 
@@ -61,7 +62,14 @@ var Rating = React.createClass({
                      data-slider-value="1"
                      data-slider-tooltip="hide" />
               <p><input type="submit" name="Submit" value="Submit Rating"/></p>
-                <Ratings />
+              <form>
+                <input type="radio" name="violence" value="1" onChange={this.sliderChange} />Low
+                <input type="radio" name="violence" value="2" onChange={this.sliderChange} />Medium
+                <input type="radio" name="violence" value="3" onChange={this.sliderChange} />High
+              </form>
+              <Nouislider className="sliders"
+                range= {{min: 0, max: 100}}
+                start= {[0, 100]} />
             </div>
         );
     }
