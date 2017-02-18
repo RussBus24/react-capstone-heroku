@@ -5,13 +5,21 @@ var initialState = {
     languageRating: 0,
     sensualityRating: 0,
     seeRating: false,
-    resultQuote: null
+    resultQuote: null,
+    movie: null,
+    result: null,
+    movieTitle: null,
+    movieYear: null,
+    movieRating: null
 };
 
 var queryReducer = function(state, action) {
     state = state || initialState;
     if (action.type === actions.IMDB_QUERY) {
-        
+        return Object.assign({}, state, {movie: action.query});
+    }
+    else if (action.type === actions.RATE_RESULT) {
+        return Object.assign({}, state, {result: action.query});
     }
     else if (action.type === actions.RATING_VISIBLE) {
         return Object.assign({}, state, {seeRating: !state.seeRating});
@@ -30,6 +38,11 @@ var queryReducer = function(state, action) {
     }
     else if (action.type === actions.RESULT_QUOTE) {
         return Object.assign({}, state, {resultQuote: action.quote});
+    }
+    else if (action.type === actions.MOVIE_INFO) {
+
+        return Object.assign({}, state, {movieTitle: action.title, movieYear: action.year, movieRating: action.rating});
+
     }
 
   return state;

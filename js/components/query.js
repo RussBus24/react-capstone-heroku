@@ -9,14 +9,15 @@ var Query = React.createClass({
         event.preventDefault();
         var searchQuery = this.refs.queryString.value;
         console.log(searchQuery);
+        this.props.searchMovie(searchQuery);
     },
 
     render: function() {
 
         return (
-          <div className="movie-query" onSubmit={this.apiQuery}>
+          <div className="movie-query">
             <p>Please enter a movie of your choice to search for.</p>
-            <form id="movieQuery">
+            <form id="movieQuery" onSubmit={this.apiQuery}>
               <input
                 type="text"
                 name="movieQueryInput"
@@ -34,6 +35,12 @@ var mapStateToProps = function(state, props) {
     visibleRating: state.seeRating,
   };
 };
+
+var mapDispatchToProps = function(dispatch) {
+  return {
+    searchMovie: function(title){dispatch(actions.imdbQuery(title))}
+  }
+}
 
 var Container = connect(mapStateToProps, mapDispatchToProps)(Query);
 

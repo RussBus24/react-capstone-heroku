@@ -8,6 +8,14 @@ var imdbQuery = function(query) {
     };
 };
 
+var RATE_RESULT = 'RATE_RESULT';
+var rateResult = function(query) {
+    return {
+        type: RATE_RESULT,
+        query: query
+    };
+};
+
 var VIOLENCE_RATING = 'VIOLENCE_RATING';
 var violenceRating = function(rating) {
     return {
@@ -109,6 +117,8 @@ var retrieveQuote = function(query) {
 
 exports.IMDB_QUERY = IMDB_QUERY;
 exports.imdbQuery= imdbQuery;
+exports.RATE_RESULT = RATE_RESULT;
+exports.rateResult = rateResult;
 exports.VIOLENCE_RATING = VIOLENCE_RATING;
 exports.violenceRating = violenceRating;
 exports.LANGUAGE_RATING = LANGUAGE_RATING;
@@ -119,3 +129,5 @@ exports.IMDB_TEST = IMDB_TEST;
 exports.imdbTest = imdbTest;
 exports.RETRIEVE_QUOTE = RESULT_QUOTE;
 exports.retrieveQuote = retrieveQuote;
+exports.MOVIE_INFO = MOVIE_INFO;
+exports.movieInfo = movieInfo;

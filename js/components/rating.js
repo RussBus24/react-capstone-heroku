@@ -23,9 +23,9 @@ var Rating = React.createClass({
     violenceRate: function(event) {
         console.log(event.target.value);
         this.setState({
-          violence: event.target.value
-        });
-        this.props.setViolenceRate(this.state.violence);
+        violence: event.target.value
+      });
+        this.props.setViolenceRate(event.target.value);
     },
 
     languageRate: function(event) {
@@ -42,6 +42,11 @@ var Rating = React.createClass({
       });
     },
 
+    sendRating: function(event) {
+      event.preventDefault();
+      this.props.submitRating(this.state.violence);
+    },
+
     render: function() {
 
         return (
@@ -50,27 +55,28 @@ var Rating = React.createClass({
             <h2>Rated: R</h2>
               <h2 color="#fff">Rate movie below on each category</h2>
               <h3><span id="ex18-label-1" className="hidden">Violence</span></h3>
-              <form>
+              <form onSubmit={this.sendRating}>
                 <input type="radio" name="violence" value="1" onChange={this.violenceRate} />Low
                 <input type="radio" name="violence" value="2" onChange={this.violenceRate} />Medium
                 <input type="radio" name="violence" value="3" onChange={this.violenceRate} />High
                 <input type="radio" name="violence" value="4" onChange={this.violenceRate} />OMG!
-              </form>
+
               <h3><span id="ex18-label-1" className="hidden">Language</span></h3>
-              <form>
+
                 <input type="radio" name="violence" value="1" onChange={this.languageRate} />Low
                 <input type="radio" name="violence" value="2" onChange={this.languageRate} />Medium
                 <input type="radio" name="violence" value="3" onChange={this.languageRate} />High
                 <input type="radio" name="violence" value="4" onChange={this.languageRate} />OMG!
-              </form>
+
               <h3><span id="ex18-label-1" className="hidden">Sensuality</span></h3>
-              <form>
+
                 <input type="radio" name="violence" value="1" onChange={this.sensualityRate} />Low
                 <input type="radio" name="violence" value="2" onChange={this.sensualityRate} />Medium
                 <input type="radio" name="violence" value="3" onChange={this.sensualityRate} />High
                 <input type="radio" name="violence" value="4" onChange={this.sensualityRate} />OMG!
-              </form>
+
               <p><input type="submit" name="Submit" value="Submit Rating"/></p>
+                </form>
             </div>
         );
     }
@@ -88,7 +94,8 @@ var mapDispatchToProps = function(dispatch) {
   return {
     setViolenceRate: function(rating){dispatch(actions.violenceRating(rating))},
     setLanguageRate: function(rating){dispatch(actions.languageRating(rating))},
-    setSensualityRate: function(rating){dispatch(actions.sensualityRating(rating))}
+    setSensualityRate: function(rating){dispatch(actions.sensualityRating(rating))},
+    submitRating: function(query){dispatch(actions.rateResult(query))}
   };
 };
 

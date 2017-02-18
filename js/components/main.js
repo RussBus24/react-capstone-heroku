@@ -5,11 +5,14 @@ var actions = require('../actions/index');
 var Title = require('./title');
 var Query = require('./query');
 var Rating = require('./rating');
+var Result = require('./result');
 
 var Main = React.createClass({
 
     componentDidMount: function() {
-        this.props.imdbTest();
+      var query = 'Braveheart';
+        this.props.imdbTest(query);
+        //console.log(this.props.movieTitle);
     },
 
     render: function() {
@@ -20,20 +23,32 @@ var Main = React.createClass({
 
                 <Query />
 
-                <Rating />
+                {this.props.movie?<Rating />:''}
+
+                {this.props.result?<Result />:''}
             </div>
         );
     }
 
 });
 
-var mapDispatchToProps = function(dispatch) {
+var mapStateToProps = function(state, props) {
     return {
-        imdbTest: function(){dispatch(actions.imdbTest())}
+        movie: state.movie,
+        result: state.result,
+        movieTitle: state.movieTitle,
+        movieYear: state.movieYear,
+        movieRating: state.movieRating
     };
 };
 
-var Container = connect(null, mapDispatchToProps)(Main);
+var mapDispatchToProps = function(dispatch) {
+    return {
+        imdbTest: function(query){dispatch(actions.imdbTest(query))}
+    };
+};
+
+var Container = connect(mapStateToProps, mapDispatchToProps)(Main);
 
 module.exports = Container;
 
