@@ -9,8 +9,7 @@ var actions = require('../actions/index');
 
 var Rating = React.createClass({
     componentDidMount: function() {
-      var sliderValue = this.refs.vRating.value;
-      console.log(sliderValue);
+
     },
 
     getInitialState() {
@@ -21,8 +20,26 @@ var Rating = React.createClass({
       };
     },
 
-    sliderChange: function(event) {
+    violenceRate: function(event) {
         console.log(event.target.value);
+        this.setState({
+          violence: event.target.value
+        });
+        this.props.setViolenceRate(this.state.violence);
+    },
+
+    languageRate: function(event) {
+        console.log(event.target.value);
+        this.setState({
+        language: event.target.value
+      });
+    },
+
+    sensualityRate: function(event) {
+      console.log(event.target.value);
+      this.setState({
+        sensuality: event.target.value
+      });
     },
 
     render: function() {
@@ -31,45 +48,29 @@ var Rating = React.createClass({
             <div className="movie-rating">
             <h1>Braveheart (1995)</h1>
             <h2>Rated: R</h2>
-              <p><span id="ex18-label-1" className="hidden">Violence</span></p>
-              <input id="ex19" type="text" ref="vRating" onClick={this.sliderChange}
-                     data-provide="slider"
-                     data-slider-ticks="[1, 2, 3, 4]"
-                     data-slider-ticks-labels='["Low", "Moderate", "High", "OMG!"]'
-                     data-slider-min="1"
-                     data-slider-max="3"
-                     data-slider-step="1"
-                     data-slider-value="1"
-                     data-slider-tooltip="hide" />
-              <p><span id="ex18-label-1" className="hidden">Language</span></p>
-              <input id="ex19" type="text"
-                     data-provide="slider"
-                     data-slider-ticks="[1, 2, 3, 4]"
-                     data-slider-ticks-labels='["Low", "Moderate", "High", "OMG!"]'
-                     data-slider-min="1"
-                     data-slider-max="3"
-                     data-slider-step="1"
-                     data-slider-value="1"
-                     data-slider-tooltip="hide" />
-              <p><span id="ex18-label-1" className="hidden">Sensuality</span></p>
-              <input id="ex19" type="text"
-                     data-provide="slider"
-                     data-slider-ticks="[1, 2, 3, 4]"
-                     data-slider-ticks-labels='["Low", "Moderate", "High", "OMG!"]'
-                     data-slider-min="1"
-                     data-slider-max="3"
-                     data-slider-step="1"
-                     data-slider-value="1"
-                     data-slider-tooltip="hide" />
-              <p><input type="submit" name="Submit" value="Submit Rating"/></p>
+              <h2 color="#fff">Rate movie below on each category</h2>
+              <h3><span id="ex18-label-1" className="hidden">Violence</span></h3>
               <form>
-                <input type="radio" name="violence" value="1" onChange={this.sliderChange} />Low
-                <input type="radio" name="violence" value="2" onChange={this.sliderChange} />Medium
-                <input type="radio" name="violence" value="3" onChange={this.sliderChange} />High
+                <input type="radio" name="violence" value="1" onChange={this.violenceRate} />Low
+                <input type="radio" name="violence" value="2" onChange={this.violenceRate} />Medium
+                <input type="radio" name="violence" value="3" onChange={this.violenceRate} />High
+                <input type="radio" name="violence" value="4" onChange={this.violenceRate} />OMG!
               </form>
-              <Nouislider className="sliders"
-                range= {{min: 0, max: 100}}
-                start= {[0, 100]} />
+              <h3><span id="ex18-label-1" className="hidden">Language</span></h3>
+              <form>
+                <input type="radio" name="violence" value="1" onChange={this.languageRate} />Low
+                <input type="radio" name="violence" value="2" onChange={this.languageRate} />Medium
+                <input type="radio" name="violence" value="3" onChange={this.languageRate} />High
+                <input type="radio" name="violence" value="4" onChange={this.languageRate} />OMG!
+              </form>
+              <h3><span id="ex18-label-1" className="hidden">Sensuality</span></h3>
+              <form>
+                <input type="radio" name="violence" value="1" onChange={this.sensualityRate} />Low
+                <input type="radio" name="violence" value="2" onChange={this.sensualityRate} />Medium
+                <input type="radio" name="violence" value="3" onChange={this.sensualityRate} />High
+                <input type="radio" name="violence" value="4" onChange={this.sensualityRate} />OMG!
+              </form>
+              <p><input type="submit" name="Submit" value="Submit Rating"/></p>
             </div>
         );
     }
@@ -83,7 +84,15 @@ var mapStateToProps = function(state, props) {
   };
 };
 
-var Container = connect(mapStateToProps, null)(Rating);
+var mapDispatchToProps = function(dispatch) {
+  return {
+    setViolenceRate: function(rating){dispatch(actions.violenceRating(rating))},
+    setLanguageRate: function(rating){dispatch(actions.languageRating(rating))},
+    setSensualityRate: function(rating){dispatch(actions.sensualityRating(rating))}
+  };
+};
+
+var Container = connect(mapStateToProps, mapDispatchToProps)(Rating);
 
 module.exports = Container;
 
