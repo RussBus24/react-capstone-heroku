@@ -12,12 +12,19 @@ var Query = React.createClass({
         this.props.searchMovie(searchQuery);
     },
 
+    querySearch: function(event) {
+        event.preventDefault();
+        var query = this.refs.queryString.value;
+        this.props.movieFind(query);
+    },
+
     render: function() {
 
         return (
           <div className="movie-query">
             <p>Please enter a movie of your choice to search for.</p>
-            <form id="movieQuery" onSubmit={this.apiQuery}>
+            <p>(Type full movie name if possible for best result)</p>
+            <form id="movieQuery" onSubmit={this.querySearch}>
               <input
                 type="text"
                 name="movieQueryInput"
@@ -38,7 +45,8 @@ var mapStateToProps = function(state, props) {
 
 var mapDispatchToProps = function(dispatch) {
   return {
-    searchMovie: function(title){dispatch(actions.imdbQuery(title))}
+    searchMovie: function(title){dispatch(actions.imdbQuery(title))},
+    movieFind: function(query){dispatch(actions.imdbTest(query))}
   }
 }
 

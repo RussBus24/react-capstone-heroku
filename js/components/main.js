@@ -10,8 +10,8 @@ var Result = require('./result');
 var Main = React.createClass({
 
     componentDidMount: function() {
-      var query = 'Braveheart';
-        this.props.imdbTest(query);
+      var query = 'Star Wars';
+        //this.props.imdbTest(query);
         //console.log(this.props.movieTitle);
     },
 
@@ -23,7 +23,7 @@ var Main = React.createClass({
 
                 <Query />
 
-                {this.props.movie?<Rating />:''}
+                {this.props.movieTitle?<Rating />:''}
 
                 {this.props.result?<Result />:''}
             </div>
@@ -38,7 +38,11 @@ var mapStateToProps = function(state, props) {
         result: state.result,
         movieTitle: state.movieTitle,
         movieYear: state.movieYear,
-        movieRating: state.movieRating
+        movieRating: state.movieRating,
+        lowValue: state.randomValueLow,
+        medValue: state.randomValueMed,
+        highValue: state.randomValueHigh,
+        omgValue: state.randomValueOmg
     };
 };
 

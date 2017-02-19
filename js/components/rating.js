@@ -51,8 +51,8 @@ var Rating = React.createClass({
 
         return (
             <div className="movie-rating">
-            <h1>Braveheart (1995)</h1>
-            <h2>Rated: R</h2>
+            <h1>{this.props.movieTitle} ({this.props.movieYear})</h1>
+            <h2>Rated: {this.props.movieRating}</h2>
               <h2 color="#fff">Rate movie below on each category</h2>
               <h3><span id="ex18-label-1" className="hidden">Violence</span></h3>
               <form onSubmit={this.sendRating}>
@@ -86,7 +86,10 @@ var mapStateToProps = function(state, props) {
   return {
     violenceRating: state.violenceRating,
     languageRating: state.languageRating,
-    sensualityRating: state.sensualityRating
+    sensualityRating: state.sensualityRating,
+    movieTitle: state.movieTitle,
+    movieYear: state.movieYear,
+    movieRating: state.movieRating
   };
 };
 
