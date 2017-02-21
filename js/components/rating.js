@@ -33,6 +33,7 @@ var Rating = React.createClass({
         this.setState({
         language: event.target.value
       });
+        this.props.setLanguageRate(event.target.value);
     },
 
     sensualityRate: function(event) {
@@ -40,10 +41,14 @@ var Rating = React.createClass({
       this.setState({
         sensuality: event.target.value
       });
+        this.props.setSensualityRate(event.target.value);
     },
 
     sendRating: function(event) {
       event.preventDefault();
+      var total = parseInt(this.state.violence + this.state.language + this.state.sensuality);
+      var average = (total);
+      console.log(average);
       this.props.submitRating(this.state.violence);
     },
 
@@ -55,26 +60,27 @@ var Rating = React.createClass({
             <h2>Rated: {this.props.movieRating}</h2>
               <h2 color="#fff">Rate movie below on each category</h2>
               <h3><span id="ex18-label-1" className="hidden">Violence</span></h3>
-              <form onSubmit={this.sendRating}>
+              <form>
                 <input type="radio" name="violence" value="1" onChange={this.violenceRate} />Low
                 <input type="radio" name="violence" value="2" onChange={this.violenceRate} />Medium
                 <input type="radio" name="violence" value="3" onChange={this.violenceRate} />High
                 <input type="radio" name="violence" value="4" onChange={this.violenceRate} />OMG!
-
+              </form>
               <h3><span id="ex18-label-1" className="hidden">Language</span></h3>
-
+              <form>
                 <input type="radio" name="violence" value="1" onChange={this.languageRate} />Low
                 <input type="radio" name="violence" value="2" onChange={this.languageRate} />Medium
                 <input type="radio" name="violence" value="3" onChange={this.languageRate} />High
                 <input type="radio" name="violence" value="4" onChange={this.languageRate} />OMG!
-
+              </form>
               <h3><span id="ex18-label-1" className="hidden">Sensuality</span></h3>
-
+              <form>
                 <input type="radio" name="violence" value="1" onChange={this.sensualityRate} />Low
                 <input type="radio" name="violence" value="2" onChange={this.sensualityRate} />Medium
                 <input type="radio" name="violence" value="3" onChange={this.sensualityRate} />High
                 <input type="radio" name="violence" value="4" onChange={this.sensualityRate} />OMG!
-
+               </form>
+                <form onSubmit={this.sendRating}>
               <p><input type="submit" name="Submit" value="Submit Rating"/></p>
                 </form>
             </div>
