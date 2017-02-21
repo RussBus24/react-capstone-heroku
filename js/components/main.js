@@ -23,9 +23,7 @@ var Main = React.createClass({
 
                 <Query />
 
-                {this.props.movieTitle?<Rating />:''}
-
-                {this.props.result?<Result />:''}
+                {this.props.children}
             </div>
         );
     }
@@ -57,3 +55,7 @@ var Container = connect(mapStateToProps, mapDispatchToProps)(Main);
 module.exports = Container;
 
 //module.exports = Main;
+
+//this.props.movieTitle?<Rating />:''}
+
+//{this.props.result?<Result />:''}

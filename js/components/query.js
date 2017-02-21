@@ -2,6 +2,7 @@ var React = require('react');
 var connect = require('react-redux').connect;
 
 var actions = require('../actions/index');
+var browserHistory = require('react-router').browserHistory;
 
 var Query = React.createClass({
 
@@ -16,6 +17,7 @@ var Query = React.createClass({
         event.preventDefault();
         var query = this.refs.queryString.value;
         this.props.movieFind(query);
+        browserHistory.push('/movie');
     },
 
     render: function() {

@@ -3,6 +3,7 @@ var connect = require('react-redux').connect;
 var Quotes = require('./quotes');
 
 var actions = require('../actions/index');
+var Link = require('react-router').Link;
 
 var Result = React.createClass({
 
@@ -16,6 +17,7 @@ var Result = React.createClass({
       <div className="movie-result">
         <h2>Based on your rating versus the movie's actual rating...</h2>
         <h1><p>{Quotes.quotesMed[Math.floor(Math.random() * 3)]}</p></h1>
+        <Link to={'/movie'}>Back</Link>
       </div>
     );
   }

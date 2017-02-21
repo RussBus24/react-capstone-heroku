@@ -2,10 +2,9 @@ var React = require('react');
 var connect = require('react-redux').connect;
 //var ReactBootstrapSlider = require("react-bootstrap-slider");
 //var Slider = require('bootstrap-slider');
-var Ratings = require('react-rating');
-var Nouislider = require('react-nouislider');
 
 var actions = require('../actions/index');
+var browserHistory = require('react-router').browserHistory;
 
 var Rating = React.createClass({
     componentDidMount: function() {
@@ -46,10 +45,11 @@ var Rating = React.createClass({
 
     sendRating: function(event) {
       event.preventDefault();
-      var total = parseInt(this.state.violence + this.state.language + this.state.sensuality);
-      var average = (total);
+      var total = parseInt(+this.state.violence + +this.state.language + +this.state.sensuality);
+      var average = (total)/4;
       console.log(average);
       this.props.submitRating(this.state.violence);
+      browserHistory.push('/results');
     },
 
     render: function() {
