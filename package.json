@@ -65,6 +65,7 @@
     "webpack": "^1.13.1"
   },
   "dependencies": {
+    "cors": "^2.8.1",
     "bootstrap-slider": "^9.7.2",
     "imdb-api": "^2.2.1",
     "isomorphic-fetch": "^2.2.1",
