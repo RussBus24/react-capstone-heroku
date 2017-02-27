@@ -21,3 +21,6 @@ A template for developing React apps.
     * Starts a server running at http://localhost:8080
     * Automatically rebuilds when any of your files change
 
+### Movie App
+
+* Testing for Movie App documentation.
