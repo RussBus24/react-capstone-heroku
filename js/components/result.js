@@ -41,9 +41,9 @@ var mapStateToProps = function(state, props) {
 
 var Container = connect(mapStateToProps, null)(Result);
 
-module.default = Container;
+module.exports = Container;
 
 //Used for testing purposes.
 
-module.exports = Result;
+//module.exports = Result;
 
