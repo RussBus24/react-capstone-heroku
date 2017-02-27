@@ -7,9 +7,6 @@ var actions = require('../actions/index');
 var browserHistory = require('react-router').browserHistory;
 
 var Rating = React.createClass({
-    componentDidMount: function() {
-
-    },
 
     getInitialState() {
       return {
@@ -111,5 +108,7 @@ var mapDispatchToProps = function(dispatch) {
 var Container = connect(mapStateToProps, mapDispatchToProps)(Rating);
 
 module.default = Container;
+
+//Used for testing purposes.
 
 module.exports = Rating;
