@@ -24,4 +24,4 @@ app.get('/fewest-guesses', function(request, response) {
 
 exports.app = app;
 
-//app.listen(process.env.PORT || 8080, process.env.IP);
+app.listen(process.env.PORT || 8080, process.env.IP);
