@@ -67,6 +67,7 @@
     "webpack": "^1.13.1"
   },
   "dependencies": {
+    "body-parser": "^1.16.1",
     "bootstrap-slider": "^9.7.2",
     "cors": "^2.8.1",
     "express": "^4.14.1",
