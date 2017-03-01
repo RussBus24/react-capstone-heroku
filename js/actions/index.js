@@ -69,7 +69,7 @@ var movieInfo = function(title, year, rating) {
 var IMDB_TEST = 'IMDB_TEST';
 var imdbTest = function(query) {
   return function(dispatch) {
-    var url = 'http://www.omdbapi.com/?t=' + query + '&y=&plot=short&r=json';
+    var url = 'https://www.omdbapi.com/?t=' + query + '&y=&plot=short&r=json';
     //var url = 'http://www.omdbapi.com/?t=Braveheart&y=&plot=short&r=json';
     //var url = 'https://api.themoviedb.org/3/movie/550?api_key=07fa12fbf410b578cb104c44a8eb42e6';
     return fetch(url).then(function(response) {
