@@ -107,8 +107,8 @@ var mapDispatchToProps = function(dispatch) {
 
 var Container = connect(mapStateToProps, mapDispatchToProps)(Rating);
 
-module.exports = Container;
+module.default = Container;
 
 //Used for testing purposes.
 
-//odule.exports = Rating;
+module.exports = Rating;
