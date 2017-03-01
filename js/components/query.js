@@ -6,13 +6,6 @@ var browserHistory = require('react-router').browserHistory;
 
 var Query = React.createClass({
 
-    apiQuery: function(event) {
-        event.preventDefault();
-        var searchQuery = this.refs.queryString.value;
-        console.log(searchQuery);
-        this.props.searchMovie(searchQuery);
-    },
-
     querySearch: function(event) {
         event.preventDefault();
         var query = this.refs.queryString.value;

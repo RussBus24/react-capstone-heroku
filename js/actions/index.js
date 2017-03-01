@@ -87,9 +87,6 @@ var imdbTest = function(query) {
         var title = data.Title;
         var year = data.Year;
         var rating = data.Rated;
-        console.log(data.Title);
-        console.log(data.Year);
-        console.log(data.Rated);
         return dispatch(
           movieInfo(title, year, rating)
         );
