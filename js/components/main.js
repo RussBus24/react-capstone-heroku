@@ -46,11 +46,11 @@ var mapDispatchToProps = function(dispatch) {
 
 var Container = connect(mapStateToProps, mapDispatchToProps)(Main);
 
-module.default = Container;
+module.exports = Container;
 
 //Used for testing purposes.
 
-module.exports = Main;
+//module.exports = Main;
 
 //this.props.movieTitle?<Rating />:''}
 
