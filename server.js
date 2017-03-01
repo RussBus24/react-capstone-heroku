@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 
 var Quotes = require('./models/quotes');
 
-app.get('/fewest-guesses', function(request, response) {
+app.get('/', function(request, response) {
     Quotes.find(function(err, quote) {
         if (err) {
             return response.status(500).json({
