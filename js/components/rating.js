@@ -40,11 +40,16 @@ var Rating = React.createClass({
 
     sendRating: function(event) {
       event.preventDefault();
-      var total = parseInt(+this.state.violence + +this.state.language + +this.state.sensuality);
-      var average = (total)/4;
-      console.log(average);
-      this.props.submitRating(this.state.violence);
-      browserHistory.push('/results');
+        if (this.state.violence || this.state.language || this.state.sensuality == 0) {
+            alert("You need to select a rating for each category.");
+        }
+        else {
+            var total = parseInt(+this.state.violence + +this.state.language + +this.state.sensuality);
+            var average = (total) / 4;
+            console.log(average);
+            this.props.submitRating(this.state.violence);
+            browserHistory.push('/results');
+        }
     },
 
     render: function() {
