@@ -10,5 +10,15 @@ module.exports = {
                'You are a raging sociopath.'],
   quotesOmg: ['ARE YOU MAD?!',
               'Put down the alcohol please.',
-              '...I have no words.']
+              '...I have no words.'],
+  ratedGlow: ['This sounds about right.',
+              'You rated it just like the MPAA. Boring.',
+              'You probably watch a lot of Disney movies.'],
+  ratedGmed: ['You probably think it deserved a PG rating.',
+              'You likely felt the content is a bit strong for kids',
+              'You might be a little sensitive there.'],
+  ratedGhigh: ['Wow, was it really that bad?',
+              ''],
+  ratedPGlow: ['You might be a little desensitized',
+               '']
 }
