@@ -14,7 +14,8 @@ var initialState = {
     result: null,
     movieTitle: null,
     movieYear: null,
-    movieRating: null
+    movieRating: null,
+    seeModal: true
 };
 
 var queryReducer = function(state, action) {

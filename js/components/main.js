@@ -6,8 +6,14 @@ var Title = require('./title');
 var Query = require('./query');
 var Rating = require('./rating');
 var Result = require('./result');
+var Modal = require('./modal');
 
 var Main = React.createClass({
+
+    toggleModal: function(e) {
+        e.preventDefault();
+        this.props.seeModal();
+    },
 
     render: function() {
 
@@ -16,7 +22,7 @@ var Main = React.createClass({
                 <Title />
 
                 <Query />
-
+                {this.props.modal?<Modal close={this.toggleModal}/>:''}
                 {this.props.children}
             </div>
         );
