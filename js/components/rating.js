@@ -40,7 +40,7 @@ var Rating = React.createClass({
 
     sendRating: function(event) {
       event.preventDefault();
-        if (this.state.violence || this.state.language || this.state.sensuality == 0) {
+        if (this.state.violence == 0 || this.state.language == 0 || this.state.sensuality == 0) {
             alert("You need to select a rating for each category.");
         }
         else {
