@@ -49,6 +49,19 @@ p {
     color: #ffffff;
 }
 
+.home {
+    height: 425px;
+    width: 98%;
+    border-radius: 6px;
+    margin: 0 auto;
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+.home h1 {
+
+}
+
 .movie-query {
     height: 120px;
 }

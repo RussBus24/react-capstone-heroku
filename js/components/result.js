@@ -7,22 +7,12 @@ var Link = require('react-router').Link;
 
 var Result = React.createClass({
 
-  componentDidMount() {
-      this.resultQuote();
-  },
-
     resultQuote: function() {
-        var resultValue = +this.props.result;
+        var resultValue = Math.floor(+this.props.result);
+        var rating = this.props.movieRating;
+        var quotes = Quotes[rating][resultValue];
         console.log(this.props.result);
-        if (this.props.result == 0) {
-            return Quotes.quotesLow[Math.floor(Math.random() * 3)];
-        } else if (this.props.result >= 0 && this.props.result < 1) {
-            return Quotes.quotesMed[Math.floor(Math.random() * 3)];
-        } else if (this.props.result >= 2 && this.props.result < 3) {
-            return Quotes.quotesHigh[Math.floor(Math.random() * 3)];
-        } else if (this.props.result >= 3 && this.props.result <= 4) {
-            return Quotes.quotesOmg[Math.floor(Math.random() * 3)];
-        }
+        return quotes[Math.floor(Math.random() * quotes.length)];
     },
 
   render: function() {
@@ -30,7 +20,7 @@ var Result = React.createClass({
     return (
       <div className="movie-result">
         <h2>Based on your rating versus the movie's actual rating...</h2>
-        <h3><p>{this.resultQuote}</p></h3>
+        <h3><p>{this.resultQuote()}</p></h3>
         <p><Link to={'/movie'}>Back</Link></p>
         <p><Link to={'/'}>Start Over</Link></p>
       </div>
