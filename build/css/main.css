@@ -52,6 +52,8 @@ p {
 .home {
     height: 425px;
     width: 98%;
+    background-image: url('Theater Seating.jpg');
+    background-position: 40% 30%;
     border-radius: 6px;
     margin: 0 auto;
     padding-left: 3em;
@@ -59,7 +61,16 @@ p {
 }
 
 .home h1 {
+    margin-top: 0px;
+}
 
+.welcome {
+    height: 425px;
+    width: 700px;
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-right: 35px;
+    padding-left: 35px;
 }
 
 .movie-query {
@@ -72,6 +83,10 @@ p {
     background-color: #77B4FF;
     border-radius: 6px;
     margin: 0 auto;
+}
+
+.movie-rating h1 {
+    margin-top: 0px;
 }
 
 .movie-result {
