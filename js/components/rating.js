@@ -59,28 +59,28 @@ var Rating = React.createClass({
             <h1>{this.props.movieTitle} ({this.props.movieYear})</h1>
             <h2>Rated: {this.props.movieRating}</h2>
               <h2 color="#fff">Rate movie below on each category</h2>
-              <h3><span id="ex18-label-1" className="hidden">Violence</span></h3>
-              <form>
-                <input type="radio" name="violence" value="1" onChange={this.violenceRate} />Low
-                <input type="radio" name="violence" value="2" onChange={this.violenceRate} />Medium
-                <input type="radio" name="violence" value="3" onChange={this.violenceRate} />High
-                <input type="radio" name="violence" value="4" onChange={this.violenceRate} />OMG!
+              <h3><span>Violence</span></h3>
+              <form className="format">
+                <input className="option-input radio" type="radio" name="violence" value="1" onChange={this.violenceRate} />Low
+                <input id="medium" className="option-input radio" type="radio" name="violence" value="2" onChange={this.violenceRate} />Medium
+                <input id="high" className="option-input radio" type="radio" name="violence" value="3" onChange={this.violenceRate} />High
+                <input id="omg" className="option-input radio" type="radio" name="violence" value="4" onChange={this.violenceRate} />OMG!
               </form>
-              <h3><span id="ex18-label-1" className="hidden">Language</span></h3>
-              <form>
-                <input type="radio" name="language" value="1" onChange={this.languageRate} />Low
-                <input type="radio" name="language" value="2" onChange={this.languageRate} />Medium
-                <input type="radio" name="language" value="3" onChange={this.languageRate} />High
-                <input type="radio" name="language" value="4" onChange={this.languageRate} />OMG!
+              <h3><span>Language</span></h3>
+              <form className="format">
+                <input className="option-input radio" type="radio" name="language" value="1" onChange={this.languageRate} />Low
+                <input id="medium" className="option-input radio" type="radio" name="language" value="2" onChange={this.languageRate} />Medium
+                <input id="high" className="option-input radio" type="radio" name="language" value="3" onChange={this.languageRate} />High
+                <input id="omg" className="option-input radio" type="radio" name="language" value="4" onChange={this.languageRate} />OMG!
               </form>
-              <h3><span id="ex18-label-1" className="hidden">Sensuality</span></h3>
-              <form>
-                <input type="radio" name="sensuality" value="1" onChange={this.sensualityRate} />Low
-                <input type="radio" name="sensuality" value="2" onChange={this.sensualityRate} />Medium
-                <input type="radio" name="sensuality" value="3" onChange={this.sensualityRate} />High
-                <input type="radio" name="sensuality" value="4" onChange={this.sensualityRate} />OMG!
+              <h3><span>Sensuality</span></h3>
+              <form className="format">
+                <input className="option-input radio" type="radio" name="sensuality" value="1" onChange={this.sensualityRate} />Low
+                <input id="medium" className="option-input radio" type="radio" name="sensuality" value="2" onChange={this.sensualityRate} />Medium
+                <input id="high" className="option-input radio" type="radio" name="sensuality" value="3" onChange={this.sensualityRate} />High
+                <input id="omg" className="option-input radio" type="radio" name="sensuality" value="4" onChange={this.sensualityRate} />OMG!
                </form>
-                <form onSubmit={this.sendRating}>
+                <form className="submit" onSubmit={this.sendRating}>
               <p><input type="submit" name="Submit" value="Submit Rating"/></p>
                 </form>
             </div>

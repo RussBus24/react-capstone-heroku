@@ -10,6 +10,7 @@ var Home = React.createClass({
               <div className="welcome"><h1>Welcome!</h1>
               <p>Here is an opportunity for you to rate movies yourself and see how you stack up
               against the MPAA rating itself. Give it a try!</p>
+              <p>*For entertainment purposes only.</p>
               </div>
           </div>
         );
