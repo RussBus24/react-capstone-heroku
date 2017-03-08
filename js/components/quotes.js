@@ -30,12 +30,12 @@ module.exports = {
             'You probably watch a lot of Disney movies.'],
         2: ['You probably think it deserved a PG rating.',
             'You likely felt the content is a bit strong for kids'],
-        3: ['Wow, was it really that bad?',
-            'You probably think it deserved a R rating.',
-            'You might be a little sensitive there.'],
-        4: ['ARE YOU MAD?!',
-            'Put down the alcohol please.',
-            '...I have no words.']
+        3: ['Sounds about right.',
+            'You are right on the mark.',
+            'Good job. This is about what a PG-13 movie should be.'],
+        4: ['You probably think it deserved a R rating.',
+            '...I have no words.',
+            'Wow, was it really that bad?']
     },
     "R": {
         1: ['You are pretty desensitized.',
@@ -46,10 +46,10 @@ module.exports = {
             'You might need a little talking to.'],
         3: ['You go hardcore.',
             'You see this all the time.',
-            '...well you are not wrong.'],
-        4: ['ARE YOU MAD?!',
-            'Put down the alcohol please.',
-            '...I have no words.']
+            'Tough guy, huh?'],
+        4: ['Sounds about right.',
+            'You are right on the mark.',
+            'Good job. This is about what a R rated movie should be.']
     },
   quotesLow: ['It appears not much phases you.',
               'You watch too many movies.',
