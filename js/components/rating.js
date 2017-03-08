@@ -45,7 +45,7 @@ var Rating = React.createClass({
         }
         else {
             var total = parseInt(+this.state.violence + +this.state.language + +this.state.sensuality);
-            var average = (total) / 4;
+            var average = (total) / 3;
             console.log(average);
             this.props.submitRating(average);
             browserHistory.push('/results');

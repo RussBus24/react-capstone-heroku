@@ -24,7 +24,7 @@ module.exports = {
             'Put down the alcohol please.',
             '...I have no words.']
     },
-    "PG13": {
+    "PG-13": {
         1: ['This sounds about right.',
             'You rated it just like the MPAA. Boring.',
             'You probably watch a lot of Disney movies.'],

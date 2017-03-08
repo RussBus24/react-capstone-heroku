@@ -1,6 +1,7 @@
 var React = require('react');
 var connect = require('react-redux').connect;
 var Quotes = require('./quotes');
+var Description = require('./ratings-desc');
 
 var actions = require('../actions/index');
 var Link = require('react-router').Link;
@@ -15,12 +16,21 @@ var Result = React.createClass({
         return quotes[Math.floor(Math.random() * quotes.length)];
     },
 
+    resultDesc: function() {
+        var rating = this.props.movieRating;
+        var description = Description[rating];
+        console.log(description);
+        return description;
+    },
+
   render: function() {
 
     return (
       <div className="movie-result">
         <h2>Based on your rating versus the movie's actual rating...</h2>
         <h3><p>{this.resultQuote()}</p></h3>
+          <h3><p>For a little perspective...</p></h3>
+          <h3><p>{this.resultDesc()}</p></h3>
         <p><Link to={'/movie'}>Back</Link></p>
         <p><Link to={'/'}>Start Over</Link></p>
       </div>
