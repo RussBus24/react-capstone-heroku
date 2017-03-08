@@ -13,10 +13,10 @@ module.exports = {
             '...I have no words.']
     },
     "PG": {
-        1: ['This sounds about right.',
-            'You might be a little desensitized.',
+        1: ['You might be a little desensitized.',
             'You probably watch a lot of Disney movies.'],
-        2: ['You are right on the money.'],
+        2: ['You are right on the money.',
+            'This sounds about right.'],
         3: ['You probably think it deserved a PG-13 rating.',
             'You likely felt the content is a bit strong for kids',
             'You might be a little sensitive there.'],
@@ -29,10 +29,10 @@ module.exports = {
             'You rated it just like the MPAA. Boring.',
             'You probably watch a lot of Disney movies.'],
         2: ['You probably think it deserved a PG rating.',
-            'You likely felt the content is a bit strong for kids',
-            'You might be a little sensitive there.'],
+            'You likely felt the content is a bit strong for kids'],
         3: ['Wow, was it really that bad?',
-            ''],
+            'You probably think it deserved a R rating.',
+            'You might be a little sensitive there.'],
         4: ['ARE YOU MAD?!',
             'Put down the alcohol please.',
             '...I have no words.']
@@ -45,7 +45,8 @@ module.exports = {
         2: ['You must have played Duke Nukem a lot.',
             'You might need a little talking to.'],
         3: ['You go hardcore.',
-            'You see this all the time.'],
+            'You see this all the time.',
+            '...well you are not wrong.'],
         4: ['ARE YOU MAD?!',
             'Put down the alcohol please.',
             '...I have no words.']
