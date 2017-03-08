@@ -12,14 +12,12 @@ var Result = React.createClass({
         var resultValue = Math.floor(+this.props.result);
         var rating = this.props.movieRating;
         var quotes = Quotes[rating][resultValue];
-        console.log(this.props.result);
         return quotes[Math.floor(Math.random() * quotes.length)];
     },
 
     resultDesc: function() {
         var rating = this.props.movieRating;
         var description = Description[rating];
-        console.log(description);
         return description;
     },
 

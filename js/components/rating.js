@@ -15,7 +15,6 @@ var Rating = React.createClass({
     },
 
     violenceRate: function(event) {
-        console.log(event.target.value);
         this.setState({
         violence: event.target.value
       });
@@ -23,7 +22,6 @@ var Rating = React.createClass({
     },
 
     languageRate: function(event) {
-        console.log(event.target.value);
         this.setState({
         language: event.target.value
       });
@@ -31,7 +29,6 @@ var Rating = React.createClass({
     },
 
     sensualityRate: function(event) {
-      console.log(event.target.value);
       this.setState({
         sensuality: event.target.value
       });
@@ -46,7 +43,6 @@ var Rating = React.createClass({
         else {
             var total = parseInt(+this.state.violence + +this.state.language + +this.state.sensuality);
             var average = (total) / 3;
-            console.log(average);
             this.props.submitRating(average);
             browserHistory.push('/results');
         }
