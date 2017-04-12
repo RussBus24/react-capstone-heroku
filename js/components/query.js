@@ -19,14 +19,17 @@ var Query = React.createClass({
           <div className="movie-query">
             <p>Please enter a movie of your choice to search for.</p>
             <p>(Type full movie name if possible for best result)</p>
-            <form id="movieQuery" onSubmit={this.querySearch}>
-              <input
-                type="text"
-                name="movieQueryInput"
-                ref="queryString"
-              />
-              <input type="submit" name="Submit" value="Find Movie!"/>
-            </form>
+            <section className="webdesigntuts-workshop">
+                <form id="movieQuery" onSubmit={this.querySearch}>
+                  <input
+                    type="search"
+                    name="movieQueryInput"
+                    placeholder="What movie are we looking for?"
+                    ref="queryString"
+                  />
+                    <button>Find Movie!</button>
+                </form>
+            </section>
           </div>
         );
     }
