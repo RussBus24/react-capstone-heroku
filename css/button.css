@@ -15,6 +15,7 @@
     margin: 0 0 0 -400px;
     position: absolute;
     width: 800px;
+    margin-top: 10px;
 }
 
 .webdesigntuts-workshop:before {
@@ -33,7 +34,7 @@
     /*background: #111;*/
     /*background: linear-gradient(#1b1b1b, #111);*/
     border-radius: 5px;
-    box-shadow: inset 0 0 0 1px #272727;
+    /*box-shadow: inset 0 0 0 1px #272727;*/
     display: inline-block;
     font-size: 0px;
     margin: 0px auto 0;
@@ -54,7 +55,7 @@
     font-family: 'Cabin', helvetica, arial, sans-serif;
     font-size: 13px;
     font-weight: 400;
-    height: 40px;
+    height: 39px;
     margin: 0;
     padding: 0 10px;
     text-shadow: 0 -1px 0 #000;
