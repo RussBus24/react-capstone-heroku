@@ -19,15 +19,15 @@
 }
 
 .webdesigntuts-workshop:before {
-    background: #444;
+    /*background: #444;
     background: linear-gradient(left, #151515, #444, #151515);
-    top: 192px;
+    top: 192px;*/
 }
 
 .webdesigntuts-workshop:after {
-    background: #000;
+    /*background: #000;
     background: linear-gradient(left, #151515, #000, #151515);
-    top: 191px;
+    top: 191px;*/
 }
 
 .webdesigntuts-workshop form {

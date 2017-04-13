@@ -9,6 +9,18 @@ and (-webkit-min-device-pixel-ratio: 2) {
     .movie-rating h2 {
         font-size: 20px;
     }
+
+    .format {
+
+    }
+
+    .movie-result {
+        height: 325px;
+    }
+
+    .movie-result h3 {
+        font-size: 17px;
+    }
 }
 
 .clearfix:before,
