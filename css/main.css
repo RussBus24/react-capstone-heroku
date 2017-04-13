@@ -2,7 +2,13 @@
 and (min-device-width: 375px)
 and (max-device-width: 667px)
 and (-webkit-min-device-pixel-ratio: 2) {
+    .movie-rating h1 {
+        font-size: 25px;
+    }
 
+    .movie-rating h2 {
+        font-size: 20px;
+    }
 }
 
 .clearfix:before,
