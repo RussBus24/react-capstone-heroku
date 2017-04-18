@@ -76,8 +76,8 @@ var Rating = React.createClass({
                 <input id="high" className="option-input radio" type="radio" name="sensuality" value="3" onChange={this.sensualityRate} />High
                 <input id="omg" className="option-input radio" type="radio" name="sensuality" value="4" onChange={this.sensualityRate} />OMG!
                </form>
-                <form className="submit" onSubmit={this.sendRating}>
-              <p><input type="submit" name="Submit" value="Submit Rating"/></p>
+                <form className="submit webdesigntuts-rating" onSubmit={this.sendRating}>
+                    <button>Submit Rating</button>
                 </form>
             </div>
         );

@@ -10,16 +10,20 @@ and (-webkit-min-device-pixel-ratio: 2) {
         font-size: 20px;
     }
 
-    .format {
-
-    }
-
     .movie-result {
         height: 325px;
     }
 
     .movie-result h3 {
         font-size: 17px;
+    }
+
+    .welcome {
+        width: 97%;
+    }
+
+    .welcome h1 {
+        font-size: 35px;
     }
 }
 
@@ -70,7 +74,7 @@ header {
 
 h1 {
     color: #000000;
-    font-size: 3em;
+    font-size: 2.5em;
     margin-bottom: 20px;
 }
 
@@ -116,7 +120,7 @@ p {
 }
 
 .movie-query {
-    height: 170px;
+    height: 150px;
 }
 
 .movie-query p {
@@ -127,7 +131,7 @@ p {
 }
 
 .movie-rating {
-    height: 450px;
+    height: 530px;
     width: 98%;
     background-color: #77B4FF;
     border-radius: 6px;
