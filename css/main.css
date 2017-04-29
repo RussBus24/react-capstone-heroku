@@ -1,7 +1,57 @@
 @media only screen
+and (min-device-width : 414px)
+and (max-device-width : 736px)
+and (device-width : 414px)
+and (device-height : 736px)
+and (orientation : portrait)
+and (-webkit-min-device-pixel-ratio : 3)
+and (-webkit-device-pixel-ratio : 3) {
+
+    html {
+
+    }
+
+    body {
+        height: auto!important;
+    }
+    .movie-rating h1 {
+        font-size: 25px;
+    }
+
+    .movie-rating h2 {
+        font-size: 20px;
+    }
+
+    .movie-result {
+        height: 325px;
+    }
+
+    .movie-result h3 {
+        font-size: 17px;
+    }
+
+    .welcome {
+        width: 97%;
+    }
+
+    .welcome h1 {
+        font-size: 35px;
+    }
+}
+
+@media only screen
 and (min-device-width: 375px)
 and (max-device-width: 667px)
 and (-webkit-min-device-pixel-ratio: 2) {
+
+    html {
+
+    }
+
+    body {
+        height: auto!important;
+    }
+
     .movie-rating h1 {
         font-size: 25px;
     }
@@ -131,11 +181,12 @@ p {
 }
 
 .movie-rating {
-    height: 530px;
+    height: auto;
     width: 98%;
     background-color: #77B4FF;
     border-radius: 6px;
     margin: 0 auto;
+    padding-bottom: 15px;
 }
 
 .movie-rating h1 {
@@ -144,11 +195,12 @@ p {
 }
 
 .movie-result {
-    height: 275px;
+    height: auto;
     width: 98%;
     background-color: #77B4FF;
     border-radius: 6px;
     margin: 0 auto;
+    padding-bottom: 5px;
 }
 
 .submit {
