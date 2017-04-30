@@ -13,7 +13,17 @@ and (-webkit-device-pixel-ratio : 3) {
 
     body {
         height: auto!important;
+        position: fixed;
+        padding-bottom: 10px;
     }
+    h1 {
+        font-size: 1.8em!important;
+    }
+
+    .movie-query p {
+        font-size: 17px!important;
+    }
+
     .movie-rating h1 {
         font-size: 25px;
     }
@@ -31,7 +41,9 @@ and (-webkit-device-pixel-ratio : 3) {
     }
 
     .welcome {
-        width: 97%;
+        width: 95%!important;
+        padding-left: 10px!important;
+        padding-right: 10px!important;
     }
 
     .welcome h1 {
@@ -153,7 +165,7 @@ p {
 }
 
 .welcome {
-    height: 450px;
+    height: auto;
     width: 90%;
     margin: 0 auto;
     padding-top: 100px;
@@ -170,7 +182,7 @@ p {
 }
 
 .movie-query {
-    height: 150px;
+    height: auto;
 }
 
 .movie-query p {
