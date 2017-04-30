@@ -55,21 +55,21 @@ var Rating = React.createClass({
             <h1>{this.props.movieTitle} ({this.props.movieYear})</h1>
             <h2>Rated: {this.props.movieRating}</h2>
               <h2 color="#fff">Rate movie below on each category</h2>
-              <h3><span>Violence</span></h3>
+              <h3 className="violence"><span>Violence</span></h3>
               <form className="format">
                 <input className="option-input radio" type="radio" name="violence" value="1" onChange={this.violenceRate} />Low
                 <input id="medium" className="option-input radio" type="radio" name="violence" value="2" onChange={this.violenceRate} />Medium
                 <input id="high" className="option-input radio" type="radio" name="violence" value="3" onChange={this.violenceRate} />High
                 <input id="omg" className="option-input radio" type="radio" name="violence" value="4" onChange={this.violenceRate} />OMG!
               </form>
-              <h3><span>Language</span></h3>
+              <h3 className="language"><span>Language</span></h3>
               <form className="format">
                 <input className="option-input radio" type="radio" name="language" value="1" onChange={this.languageRate} />Low
                 <input id="medium" className="option-input radio" type="radio" name="language" value="2" onChange={this.languageRate} />Medium
                 <input id="high" className="option-input radio" type="radio" name="language" value="3" onChange={this.languageRate} />High
                 <input id="omg" className="option-input radio" type="radio" name="language" value="4" onChange={this.languageRate} />OMG!
               </form>
-              <h3><span>Sensuality</span></h3>
+              <h3 className="sensuality"><span>Sensuality</span></h3>
               <form className="format">
                 <input className="option-input radio" type="radio" name="sensuality" value="1" onChange={this.sensualityRate} />Low
                 <input id="medium" className="option-input radio" type="radio" name="sensuality" value="2" onChange={this.sensualityRate} />Medium

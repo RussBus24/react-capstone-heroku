@@ -15,8 +15,12 @@ and (-webkit-device-pixel-ratio : 3) {
     }
     h1 {
         font-size: 1.8em!important;
-        margin-top: 10px!important;
-        margin-bottom: 10px!important;
+        margin-top: 8px!important;
+        margin-bottom: 8px!important;
+    }
+
+    .movie-query {
+        margin-bottom: -5px;
     }
 
     .movie-query p {
@@ -49,6 +53,10 @@ and (-webkit-device-pixel-ratio : 3) {
 
     .welcome h1 {
         font-size: 35px;
+    }
+    .violence {
+        margin-top: 10px;
+        margin-bottom: 5px;
     }
 }
 
