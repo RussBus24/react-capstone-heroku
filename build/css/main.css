@@ -7,13 +7,10 @@ and (orientation : portrait)
 and (-webkit-min-device-pixel-ratio : 3)
 and (-webkit-device-pixel-ratio : 3) {
 
-    html {
-
-    }
-
     body {
         height: auto!important;
-        position: fixed;
+        position: fixed!important;
+        left: 4px;
         padding-bottom: 10px;
     }
     h1 {
@@ -62,6 +59,17 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
     body {
         height: auto!important;
+        position: fixed!important;
+        left: 4px;
+        padding-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 1.8em!important;
+    }
+
+    .movie-query p {
+        font-size: 15px!important;
     }
 
     .movie-rating h1 {
@@ -81,7 +89,11 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     .welcome {
-        width: 97%;
+        width: 95%!important;
+        padding-left: 10px!important;
+        padding-right: 10px!important;
+        padding-top: 70px!important;
+        padding-bottom: 10px!important;
     }
 
     .welcome h1 {
@@ -150,7 +162,7 @@ p {
 }
 
 .home {
-    height: 450px;
+    height: auto;
     width: 98%;
     background-image: url('Theater Seating.jpg');
     background-position: 40% 30%;
