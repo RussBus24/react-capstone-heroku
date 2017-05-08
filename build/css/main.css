@@ -174,7 +174,7 @@ p {
 }
 
 .home {
-    height: auto;
+    height: 475px;
     width: 98%;
     background-image: url('Theater Seating.jpg');
     background-position: 40% 30%;
